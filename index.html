@@ -132,10 +132,13 @@
                     </ul>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" id="mainImage" src="img/tdf/mainmenu.png" alt="An in-game screenshot of the main menu, where the player can select one of three saves to play.">
+                    <br>
                     <img class="img-responsive" id="magicImage" src="img/tdf/magic.png" alt="An in-game screenshot displaying the magic system used in combat.">
+
                     <div id="magicModal" class="modal">
 
-                        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                        <span class="close" onclick="document.getElementById('magicModal').style.display='none'">&times;</span>
 
                         <img class="modal-content" id="magic">
 
@@ -159,7 +162,34 @@
                                 modal.style.display = "none";
                             }
                         </script>
+                    </div>
 
+                    <div id="menuModal" class="modal">
+
+                        <span class="close" onclick="document.getElementById('menuModal').style.display='none'">&times;</span>
+
+                        <img class="modal-content" id="menu">
+
+                        <div id="menuCaption"></div>
+
+                        <script type="text/javascript">
+                            var modal = document.getElementById('menuModal');
+
+                            var img = document.getElementById('mainImage');
+                            var modalImg = document.getElementById("menu");
+                            var captionText = document.getElementById("menuCaption");
+                            img.onclick = function(){
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+
+                            var span = document.getElementsByClassName("close")[0];
+
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        </script>
                     </div>
                 </div>
             </div>

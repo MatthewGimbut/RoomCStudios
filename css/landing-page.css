@@ -191,6 +191,14 @@ p.copyright {
 
 #magicImage:hover {opacity: 0.7;}
 
+#mainImage {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#mainImage:hover {opacity: 0.7;}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -213,6 +221,17 @@ p.copyright {
 }
 
 #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1100px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+#menuCaption {
     margin: auto;
     display: block;
     width: 80%;
