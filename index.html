@@ -83,7 +83,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1><img class="img-responsive" src="img/roomc.png" alt=""></h1>
+                        <div class="col-lg-offset-5">
+                            <img class="img-responsive" src="img/roomc.png" alt="">
+                        </div>
+                        <br>
                         <h1>Room C Studios</h1>
                         <h3>Game Development</h3>
                         <hr class="intro-divider">
@@ -101,15 +104,15 @@
 
     <a  name="tdf"></a>
     <div class="content-section-a">
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer-black">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">The Dark Forest (Pre-Alpha)</h2>
-                    <br>
-                    <h3>Game description goes here.</h3>
+                    <p class="lead">The Dark Forest (temporary name) is a 2D RPG dungeon crawler created with a custom-built game engine. The player takes over after their character
+                        has been mysteriously placed in the middle of a forest with no idea of their surroundings. The player needs to gather weapons and armor to level up and survive.
+                        As you progress, you will learn about the hidden secrets placed deep within the woods.</p>
                     <br>
                     <h3>The Dark Forest currently features:</h3>
                     <ul>
@@ -117,19 +120,57 @@
                         <li class="lead">Dynamic quest system</li>
                         <li class="lead">Stats, leveling, player progression</li>
                         <li class="lead">Hack and slash style combat system</li>
+                        <li class="lead">Multiple save files for multiple characters</li>
                     </ul>
-                    <p class="lead"></p>
+                    <br>
+                    <h3>Soon to come:</h3>
+                    <ul>
+                        <li class="lead">Long chains of areas to create exciting dungeons</li>
+                        <li class="lead">Trading/bartering system</li>
+                        <li class="lead">Improvements to combat</li>
+                        <li class="lead">More animations, sound effects, and general media</li>
+                    </ul>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <ul class="list-inline gallery">
-                        <li><img class="thumbnail zoom" src="img/tdf/magic.png" alt=""></li>
-                    </ul>
+                    <img class="img-responsive" id="magicImage" src="img/tdf/magic.png" alt="An in-game screenshot displaying the magic system used in combat.">
+                    <div id="magicModal" class="modal">
+
+                        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+                        <img class="modal-content" id="magic">
+
+                        <div id="caption"></div>
+
+                        <script type="text/javascript">
+                            var modal = document.getElementById('magicModal');
+
+                            var img = document.getElementById('magicImage');
+                            var modalImg = document.getElementById("magic");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function(){
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                            }
+
+                            var span = document.getElementsByClassName("close")[0];
+
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                        </script>
+
+                    </div>
                 </div>
             </div>
         </div>
         <!-- /.container -->
     </div>
     <!-- /.content-section-a -->
+
+    <script type="text/javascript">
+            var myArray = [];
+    </script>
 
     <!-- Page Content -->
     <a  name="media"></a>
@@ -164,7 +205,7 @@
                     <hr class="section-heading-spacer-black">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Downloads</h2>
-                    <p class="lead"> </p>
+                    <h3>A free demo will be available with the Alpha release by December 2016. Stay tuned!</h3>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                 </div>
@@ -184,9 +225,13 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">About Room C Studios</h2>
-                    <p class="lead"> About goes here</p>
+                    <p class="lead">Room C Studios is an independent video game development company located primarily in Monroe Township, New Jersey. It was established in September 2015 by several students at Rowan University.</p>
+                    <p class="lead"> We are a small, privately held company with a select group of employees. This gives us the freedom to build the best possible games without the deadlines and bureaucracy associated with large publishing companies.</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <br>
+                    <br>
+                    <img class="img-responsive" src="img/Room%20C%20Studios%206.png" alt="">
                 </div>
             </div>
 
